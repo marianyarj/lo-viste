@@ -1,0 +1,134 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "El juego del miedo",
+      "director": "James Wan",
+      "picture": "img/jose-francisco-morales-ibYF02aYEbE-unsplash.jpg",
+      "genre": "terror",
+      "duration": "1h 43min",
+      "year": 2004,
+      "country": "Estados Unidos",
+      "description": "Dos personas despiertan atrapadas en un lugar desconocido. Deben resolver pistas y enfrentar desafíos para intentar escapar y salvar sus vidas. La película crea una atmósfera de misterio y tensión, explorando decisiones difíciles y la lucha por sobrevivir.",
+      "watched": true
+    },
+    {
+      "id": "c82f",
+      "title": "El proyecto de la bruja de Blair",
+      "director": "Daniel Myrick y Eduardo Sánchez",
+      "picture": null,
+      "genre": "terror",
+      "duration": "1h 21min",
+      "year": 1999,
+      "country": "Estados Unidos",
+      "description": "Tres estudiantes de cine desaparecen mientras graban un documental sobre una leyenda local en un bosque. Lo único que se encuentra es su metraje, que revela una experiencia aterradora.",
+      "watched": true
+    },
+    {
+      "id": "0514",
+      "title": "El Hoyo",
+      "director": "Galder Gaztelu-Urrutia",
+      "picture": null,
+      "genre": "terror",
+      "duration": "1h 34min",
+      "year": 2019,
+      "country": "España",
+      "description": "En una prisión vertical donde los alimentos descienden por niveles, los internos enfrentan dilemas morales y luchan por sobrevivir en un sistema despiadado.",
+      "watched": true
+    },
+    {
+      "id": "928a",
+      "title": "Parásitos",
+      "director": "Bong Joon-ho",
+      "picture": null,
+      "genre": "terror",
+      "duration": "2h 12min",
+      "year": 2019,
+      "country": "Corea del Sur",
+      "description": "Una familia pobre se infiltra en la vida de una familia rica, desencadenando una serie de eventos inesperados y tensos que revelan profundas desigualdades sociales.",
+      "watched": true
+    },
+    {
+      "id": "8e61",
+      "title": "Cuando acecha la maldad",
+      "director": "Demián Rugna",
+      "picture": null,
+      "genre": "terror",
+      "duration": "1h 39min",
+      "year": 2023,
+      "country": "Argentina",
+      "description": "Em uma vila rural, dois irmãos descobrem um homem possuído prestes a dar origem a um mal demoníaco. Na tentativa de impedir que isso se espalhe, eles provocam consequências aterradoras.",
+      "watched": true
+    },
+    {
+      "id": "8797",
+      "title": "Sherlock: La novia abominable",
+      "director": "Douglas Mackinnon",
+      "picture": null,
+      "genre": "misterio",
+      "duration": "1h 29min",
+      "year": 2016,
+      "country": "Reino Unido",
+      "description": "En un Londres victoriano, Sherlock Holmes y el Dr. Watson investigan el caso de una novia que aparentemente regresó de la muerte para cometer una serie de asesinatos. Un especial con una atmósfera clásica y giros que desafían la lógica.",
+      "watched": true
+    },
+    {
+      "id": "fdee",
+      "title": "Enola Holmes",
+      "director": "Harry Bradbeer",
+      "picture": null,
+      "genre": "misterio",
+      "duration": "2h 3min",
+      "year": 2020,
+      "country": "Reino Unido",
+      "description": "Enola, la hermana menor de Sherlock Holmes, se embarca en una aventura para encontrar a su madre desaparecida mientras evade a sus hermanos y resuelve un misterio que podría cambiar el curso de la historia.",
+      "watched": true
+    },
+    {
+      "id": "3f68",
+      "title": "Infiesto",
+      "director": "Patxi Amezcua",
+      "picture": null,
+      "genre": "misterio",
+      "duration": "1h 36min",
+      "year": 2023,
+      "country": "España",
+      "description": "Durante el inicio del confinamiento por la pandemia, dos inspectores son llamados a un pequeño pueblo para investigar la reaparición de una joven que había sido dada por muerta, revelando una red más oscura de lo que imaginaban.",
+      "watched": true
+    },
+    {
+      "id": "6fea",
+      "title": "Entre navajas y secretos",
+      "director": "Rian Johnson",
+      "picture": null,
+      "genre": "misterio",
+      "duration": "2h 10min",
+      "year": 2019,
+      "country": "Reino Unido",
+      "description": "Cuando el famoso novelista Harlan Thrombey aparece muerto en su mansión, el detective Benoit Blanc es llamado para investigar. A medida que interroga a la excéntrica familia, surgen secretos que hacen del caso un complejo rompecabezas.",
+      "watched": true
+    },
+    {
+      "id": "8a85",
+      "title": "Te veo",
+      "director": "Adam Randall",
+      "picture": null,
+      "genre": "misterio",
+      "duration": "1h 42min",
+      "year": 2019,
+      "country": "Reino Unido",
+      "description": "Un detective investiga la desaparición de un niño mientras sucesos extraños y perturbadores comienzan a afectar a su familia, revelando secretos ocultos y giros inesperados.",
+      "watched": true
+    }
+  ],
+  "genres": [
+    {
+      "id": "1",
+      "type": "terror"
+    },
+    {
+      "id": "0eed",
+      "type": "misterio"
+    }
+  ]
+}
