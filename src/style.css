@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.movie-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid lightgray;
+}
+
+.container-left {
+    display: flex;
+    gap: 20px;
+    border-right: 1px solid lightblue;
+}
+
+.movie-description {
+    max-width: 275px;
+}
