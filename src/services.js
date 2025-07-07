@@ -15,6 +15,17 @@ async function getMovies() {
     return moviesData;
 }
 
+async function getMovieById(id) {
+    const response = await fetch(urlMovies + id, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const movieById = await response.json();
+    return movieById;
+}
+
 //console.log(getMovies());
 
 const moviesContainer = document.getElementById("section-movies");
@@ -29,6 +40,7 @@ async function printMovies() {
                 <button type="submit">${movie.watched}</button>
             </div>
             <div class="container-right">
+                <button type="submit" onclick=deleteMovie('${movie.id}')>Borrar</button>
                 <p class="movie-director">Director: ${movie.director}</p>
                 <p class="movie-description">${movie.description}</p>
                 <p class="movie-duration">${movie.duration}</p>
@@ -39,4 +51,40 @@ async function printMovies() {
         `
     });
     return printMoviesList;
+}
+
+
+async function deleteMovie(id) {
+    //let moviesList = await getMovies();
+    /*percorre o array até encontrar o um match entre item.id 
+    e id e uma vez que encontrou o retorna a propriedade title.*/
+    //movieTitle = (moviesList.find(item => item.id === id)).title;
+
+    movieComplete = await getMovieById(id);
+
+    /*
+    let movieElementTitle = "";
+    for (let index = 0; index < moviesList.length; index++) {
+        if (moviesList[index].id === id) {
+            //console.log(moviesList[index].title);
+            movieElementTitle = moviesList[index].title;
+            break;
+        }
+    }*/
+    //um popup que pede uma confirmaçao para continuar e caso sim, ou seja, "confirm" seja true, elimina.
+    if (confirm(`¿Estás segura de que deseas eliminar "${movieComplete.title}"?`)) {
+        const response = await fetch(urlMovies + id, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            printMovies();
+            alert(`La película >> ${movieComplete.title} << fue eliminada.`);
+        } else {
+            alert(`ERROR: La película >> ${movieComplete.title} << no fue eliminada.`);
+        }
+    }
 }
