@@ -1,11 +1,32 @@
-const urlMovies = "http://localhost:3000/movies/";
+"use strict";
+const URL_API_MOVIES = "http://localhost:3000/movies/";
 //get = read
+async function createMovie(newMovie) {
+    const response = await fetch(URL_API_MOVIES, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newMovie)
+    });
+    if (response.ok) {
+        printMovies();
+        alert(`La película ${newMovie.title} fue añadida.`);
+    } else {
+        alert(`ERROR al intentar añadir la película: ${newMovie.title}.`);
+    }
+}
+
+function sendMovieInfo() {
+    const title = document.getElementById("title").value;
+    const director = document.getElementById("director").value;
+}
 
 /*async -> requisição ao servidor, ou seja, não bloqueia todo o código 
 enquanto espera uma resposta do servidor (ou o que seja).*/
 async function getMovies() {
     /*sempre que uma função seja marcada async é necessário ter o await, que é o esperar a resposta. */
-    const response = await fetch(urlMovies, {
+    const response = await fetch(URL_API_MOVIES, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json'
@@ -16,7 +37,7 @@ async function getMovies() {
 }
 
 async function getMovieById(id) {
-    const response = await fetch(urlMovies + id, {
+    const response = await fetch(URL_API_MOVIES + id, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json'
@@ -60,7 +81,7 @@ async function deleteMovie(id) {
     e id e uma vez que encontrou o retorna a propriedade title.*/
     //movieTitle = (moviesList.find(item => item.id === id)).title;
 
-    movieComplete = await getMovieById(id);
+    const movieComplete = await getMovieById(id);
 
     /*
     let movieElementTitle = "";
@@ -73,7 +94,7 @@ async function deleteMovie(id) {
     }*/
     //um popup que pede uma confirmaçao para continuar e caso sim, ou seja, "confirm" seja true, elimina.
     if (confirm(`¿Estás segura de que deseas eliminar "${movieComplete.title}"?`)) {
-        const response = await fetch(urlMovies + id, {
+        const response = await fetch(URL_API_MOVIES + id, {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json'
