@@ -1,23 +1,18 @@
 "use strict";
 const URL_API_MOVIES = "http://localhost:3000/movies/";
-//get = read
-async function createMovie(newMovie) {
-    const response = await fetch(URL_API_MOVIES, {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newMovie)
-    });
-    if (response.ok) {
-        printMovies();
-        alert(`La película ${newMovie.title} fue añadida.`);
-    } else {
-        alert(`ERROR al intentar añadir la película: ${newMovie.title}.`);
-    }
+
+function openModal() {
+    document.getElementById("movieModal").style.display = "block";
 }
 
-function sendMovieInfo() {
+function closeModal() {
+    document.getElementById("movieModal").style.display = "none";
+    document.getElementById("movieForm").reset();
+}
+
+async function sendMovieInfo(event) {
+    event.preventDefault();
+
     const title = document.getElementById("title").value;
     const director = document.getElementById("director").value;
     const year = document.getElementById("year").value;
@@ -34,9 +29,30 @@ function sendMovieInfo() {
         country: country,
         genre: genre,
         file: file
-    }
-    createMovie(newMovie);
+    };
+
+    await createMovie(newMovie);
+    console.log("Filme enviado:", newMovie);
+    closeModal();
 }
+
+async function createMovie(newMovie) {
+    const response = await fetch(URL_API_MOVIES, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newMovie)
+    });
+
+    if (response.ok) {
+        printMovies();
+        alert(`La película ${newMovie.title} fue añadida.`);
+    } else {
+        alert(`ERROR al intentar añadir la película: ${newMovie.title}.`);
+    }
+}
+
 
 /*async -> requisição ao servidor, ou seja, não bloqueia todo o código 
 enquanto espera uma resposta do servidor (ou o que seja).*/
