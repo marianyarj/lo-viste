@@ -1,16 +1,18 @@
 "use strict";
 const URL_API_MOVIES = "http://localhost:3000/movies/";
 
+// modal de adicionar novo filme
 function openModal() {
     document.getElementById("movieModal").style.display = "block";
 }
 
 function closeModal() {
     document.getElementById("movieModal").style.display = "none";
-    document.getElementById("movieForm").reset();
+    document.querySelector("#movieModal form").reset();
+    movieIdToUpdate = null;
 }
 
-async function sendMovieInfo(event) {
+function sendMovieInfo(event) {
     event.preventDefault();
 
     const title = document.getElementById("title").value;
@@ -19,7 +21,7 @@ async function sendMovieInfo(event) {
     const description = document.getElementById("description").value;
     const country = document.getElementById("country").value;
     const genre = document.getElementById("genre").value;
-    const file = document.getElementById("picture").value;
+    const picture = document.getElementById("picture").value;
 
     const newMovie = {
         title: title,
@@ -28,14 +30,17 @@ async function sendMovieInfo(event) {
         description: description,
         country: country,
         genre: genre,
-        file: file
+        picture: picture
     };
 
-    await createMovie(newMovie);
-    console.log("Filme enviado:", newMovie);
-    closeModal();
-}
+    if (movieIdToUpdate) {
+        updateMovie(movieIdToUpdate, newMovie);
+    } else {
+        createMovie(newMovie);
+    }
 
+}
+//Create -> Post
 async function createMovie(newMovie) {
     const response = await fetch(URL_API_MOVIES, {
         method: "POST",
@@ -53,6 +58,41 @@ async function createMovie(newMovie) {
     }
 }
 
+//Update -> Put
+async function updateMovie(id, editedMovie) {
+    const response = await fetch(URL_API_MOVIES + id, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(editedMovie)
+    });
+
+    if (response.ok) {
+        printMovies();
+        alert(`Película actualizada: ${editedMovie.title}`);
+    } else {
+        alert("Error al actualizar la película.");
+    }
+}
+
+let movieIdToUpdate = null;
+
+async function infoMovieUpdate(id) {
+    const movie = await getMovieById(id);
+
+    document.getElementById("title").value = movie.title;
+    document.getElementById("director").value = movie.director;
+    document.getElementById("year").value = movie.year;
+    document.getElementById("description").value = movie.description;
+    document.getElementById("country").value = movie.country;
+    document.getElementById("genre").value = movie.genre;
+    document.getElementById("picture").value = movie.picture;
+
+    movieIdToUpdate = id;
+
+    openModal();
+}
 
 /*async -> requisição ao servidor, ou seja, não bloqueia todo o código 
 enquanto espera uma resposta do servidor (ou o que seja).*/
@@ -89,10 +129,18 @@ async function printMovies() {
         return moviesContainer.innerHTML += `
         <div class="movie-container">
             <div class="container-left">
-                <h3 class="movie-title">${movie.title}</h3>
+                <div>
+                    <h3 class="movie-title">${movie.title}</h3>
+                    <img class="movie-pic" src="${movie.picture}" alt="foto de la película ${movie.title}">
+                </div>
+                <div>
+                    <button type="submit" onclick=deleteMovie('${movie.id}')>Borrar</button>
+                    <button type="submit" onclick=infoMovieUpdate('${movie.id}')>Actualizar</button>
+                </div>
+                
             </div>
             <div class="container-right">
-                <button type="submit" onclick=deleteMovie('${movie.id}')>Borrar</button>
+                
                 <p class="movie-director">Director: ${movie.director}</p>
                 <p class="movie-description">${movie.description}</p>
                 <p class="movie-year">${movie.year}</p>

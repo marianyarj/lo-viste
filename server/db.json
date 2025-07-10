@@ -4,101 +4,111 @@
       "id": "1",
       "title": "El juego del miedo",
       "director": "James Wan",
-      "picture": "img/jose-francisco-morales-ibYF02aYEbE-unsplash.jpg",
+      "picture": "https://i.ytimg.com/vi/FpIaW9TPx8I/maxresdefault.jpg",
       "genre": "terror",
       "year": 2004,
       "country": "Estados Unidos",
       "description": "Dos personas despiertan atrapadas en un lugar desconocido. Deben resolver pistas y enfrentar desafíos para intentar escapar y salvar sus vidas. La película crea una atmósfera de misterio y tensión, explorando decisiones difíciles y la lucha por sobrevivir."
     },
     {
-      "id": "c82f",
       "title": "El proyecto de la bruja de Blair",
       "director": "Daniel Myrick y Eduardo Sánchez",
-      "picture": null,
-      "genre": "terror",
-      "year": 1999,
+      "year": "1999",
+      "description": "Tres estudiantes de cine desaparecen mientras graban un documental sobre una leyenda local en un bosque. Lo único que se encuentra es su metraje, que revela una experiencia aterradora.",
       "country": "Estados Unidos",
-      "description": "Tres estudiantes de cine desaparecen mientras graban un documental sobre una leyenda local en un bosque. Lo único que se encuentra es su metraje, que revela una experiencia aterradora."
+      "genre": "terror",
+      "picture": "https://caracoltv.brightspotcdn.com/dims4/default/9a64622/2147483647/strip/true/crop/1440x810+0+104/resize/1024x576!/format/webp/quality/75/?url=http%3A%2F%2Fcaracol-brightspot.s3.us-west-2.amazonaws.com%2F77%2F98%2F5a2399bc48c2bfe21416b73516b9%2Fblair-witch-project.jpg",
+      "id": "c82f"
     },
     {
-      "id": "0514",
       "title": "El Hoyo",
       "director": "Galder Gaztelu-Urrutia",
-      "picture": null,
-      "genre": "terror",
-      "year": 2019,
+      "year": "2019",
+      "description": "En una prisión vertical donde los alimentos descienden por niveles, los internos enfrentan dilemas morales y luchan por sobrevivir en un sistema despiadado.",
       "country": "España",
-      "description": "En una prisión vertical donde los alimentos descienden por niveles, los internos enfrentan dilemas morales y luchan por sobrevivir en un sistema despiadado."
+      "genre": "terror",
+      "picture": "https://img.rtve.es/imagenes/hoyo-2019-opera-prima-galder-gaztelu-urrutia/1645183101355.jpg",
+      "id": "0514"
     },
     {
-      "id": "928a",
       "title": "Parásitos",
       "director": "Bong Joon-ho",
-      "picture": null,
-      "genre": "terror",
-      "year": 2019,
+      "year": "2019",
+      "description": "Una familia pobre se infiltra en la vida de una familia rica, desencadenando una serie de eventos inesperados y tensos que revelan profundas desigualdades sociales.",
       "country": "Corea del Sur",
-      "description": "Una familia pobre se infiltra en la vida de una familia rica, desencadenando una serie de eventos inesperados y tensos que revelan profundas desigualdades sociales."
+      "genre": "terror",
+      "picture": "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABU8cfFH1oPrMYQ0utvshjZDTtw-6IJCE1N7_jZb6lasYQ8_aQEGCwoqsX1ryXnWZcqFlyqo2bPfZIBL_hTiuNPEOnxiJLTmdR2hc.jpg?r=8c3",
+      "id": "928a"
     },
     {
-      "id": "8e61",
       "title": "Cuando acecha la maldad",
       "director": "Demián Rugna",
-      "picture": null,
-      "genre": "terror",
-      "year": 2023,
+      "year": "2023",
+      "description": "Em uma vila rural, dois irmãos descobrem um homem possuído prestes a dar origem a um mal demoníaco. Na tentativa de impedir que isso se espalhe, eles provocam consequências aterradoras.",
       "country": "Argentina",
-      "description": "Em uma vila rural, dois irmãos descobrem um homem possuído prestes a dar origem a um mal demoníaco. Na tentativa de impedir que isso se espalhe, eles provocam consequências aterradoras."
+      "genre": "terror",
+      "picture": "https://m.media-amazon.com/images/S/pv-target-images/38e6a596e8ad3afae787fe7951b2385724139c4305bbe971999b1a4357fc77c3.jpg",
+      "id": "8e61"
     },
     {
-      "id": "8797",
       "title": "Sherlock: La novia abominable",
       "director": "Douglas Mackinnon",
-      "picture": null,
-      "genre": "misterio",
-      "year": 2016,
+      "year": "2016",
+      "description": "En un Londres victoriano, Sherlock Holmes y el Dr. Watson investigan el caso de una novia que aparentemente regresó de la muerte para cometer una serie de asesinatos. Un especial con una atmósfera clásica y giros que desafían la lógica.",
       "country": "Reino Unido",
-      "description": "En un Londres victoriano, Sherlock Holmes y el Dr. Watson investigan el caso de una novia que aparentemente regresó de la muerte para cometer una serie de asesinatos. Un especial con una atmósfera clásica y giros que desafían la lógica."
+      "genre": "misterio",
+      "picture": "https://www.elcinedeloqueyotediga.net/wp-content/uploads/2016/01/SherlockLanoviaabominable05.jpg",
+      "id": "8797"
     },
     {
-      "id": "fdee",
       "title": "Enola Holmes",
       "director": "Harry Bradbeer",
-      "picture": null,
-      "genre": "misterio",
-      "year": 2020,
+      "year": "2020",
+      "description": "Enola, la hermana menor de Sherlock Holmes, se embarca en una aventura para encontrar a su madre desaparecida mientras evade a sus hermanos y resuelve un misterio que podría cambiar el curso de la historia.",
       "country": "Reino Unido",
-      "description": "Enola, la hermana menor de Sherlock Holmes, se embarca en una aventura para encontrar a su madre desaparecida mientras evade a sus hermanos y resuelve un misterio que podría cambiar el curso de la historia."
+      "genre": "misterio",
+      "picture": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQxJfJqS12m8MsKFhNJWnGglfPVCYAT9bxkcrUHKU-NNr13nCLi8tlHksFA9gavcyoaoU3bBuMDVE9BLgoFjsABjj1gGFR9P6mN8XUT0TWCROwcY_Jn93A49gy4BJXxqo_kP0S4JrkAeA/s1005/CriticaEnolaHolmes.jpg",
+      "id": "fdee"
     },
     {
-      "id": "3f68",
       "title": "Infiesto",
       "director": "Patxi Amezcua",
-      "picture": null,
-      "genre": "misterio",
-      "year": 2023,
+      "year": "2023",
+      "description": "Durante el inicio del confinamiento por la pandemia, dos inspectores son llamados a un pequeño pueblo para investigar la reaparición de una joven que había sido dada por muerta, revelando una red más oscura de lo que imaginaban.",
       "country": "España",
-      "description": "Durante el inicio del confinamiento por la pandemia, dos inspectores son llamados a un pequeño pueblo para investigar la reaparición de una joven que había sido dada por muerta, revelando una red más oscura de lo que imaginaban."
+      "genre": "misterio",
+      "picture": "https://hips.hearstapps.com/hmg-prod/images/infiesto-donde-se-rodo-1675679017.jpg",
+      "id": "3f68"
     },
     {
-      "id": "6fea",
       "title": "Entre navajas y secretos",
       "director": "Rian Johnson",
-      "picture": null,
-      "genre": "misterio",
-      "year": 2019,
+      "year": "2019",
+      "description": "Cuando el famoso novelista Harlan Thrombey aparece muerto en su mansión, el detective Benoit Blanc es llamado para investigar. A medida que interroga a la excéntrica familia, surgen secretos que hacen del caso un complejo rompecabezas.",
       "country": "Reino Unido",
-      "description": "Cuando el famoso novelista Harlan Thrombey aparece muerto en su mansión, el detective Benoit Blanc es llamado para investigar. A medida que interroga a la excéntrica familia, surgen secretos que hacen del caso un complejo rompecabezas."
+      "genre": "misterio",
+      "picture": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI6U6MQ_4xVmOFK95f9DicgkcPhCiml8kXN6pUppNQh1wSY_8OYf5MEMcucwpq_Nsi5Sip1dXOhQ99qpG0xEUKUgwnAVkkD8fYbeE_ltcaSvySF0nsaKXGA1W1usqlEs86iTH7ewARDMM/s1600/EntreNavajasySecretos.jpg",
+      "id": "6fea"
     },
     {
-      "id": "8a85",
       "title": "Te veo",
       "director": "Adam Randall",
-      "picture": null,
-      "genre": "misterio",
-      "year": 2019,
+      "year": "2019",
+      "description": "Un detective investiga la desaparición de un niño mientras sucesos extraños y perturbadores comienzan a afectar a su familia, revelando secretos ocultos y giros inesperados.",
       "country": "Reino Unido",
-      "description": "Un detective investiga la desaparición de un niño mientras sucesos extraños y perturbadores comienzan a afectar a su familia, revelando secretos ocultos y giros inesperados."
+      "genre": "misterio",
+      "picture": "https://i.ytimg.com/vi/dQ87DQIVIL4/maxresdefault.jpg",
+      "id": "8a85"
+    },
+    {
+      "id": "26bc",
+      "title": "asas",
+      "director": "sdasd",
+      "year": "2012",
+      "description": "sdadadas",
+      "country": "Brasil",
+      "genre": "asdasdas",
+      "picture": "https://e1.pxfuel.com/desktop-wallpaper/386/706/desktop-wallpaper-de-gato-preto-ao-vivo-gato-preto.jpg"
     }
   ]
 }
