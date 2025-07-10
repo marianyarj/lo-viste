@@ -4,6 +4,37 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #1D022F;
+
+}
+
+main {
+    height: 100vh;
+}
+
+.parallax {
+    background-image: url(./img/drop-labs-CZ3UfZAANow-unsplashs.svg);
+    background-size: cover;
+    min-height: 650px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.title {
+    height: 250px;
+    background-color: #F4F2BF;
+    font-size: 40px;
+    color: #1D022F;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #1D022F;
+    border-bottom: 1px solid #1D022F;
+}
+
 .movie-section {
     display: flex;
     flex-wrap: wrap;
