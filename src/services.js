@@ -20,6 +20,22 @@ async function createMovie(newMovie) {
 function sendMovieInfo() {
     const title = document.getElementById("title").value;
     const director = document.getElementById("director").value;
+    const year = document.getElementById("year").value;
+    const description = document.getElementById("description").value;
+    const country = document.getElementById("country").value;
+    const genre = document.getElementById("genre").value;
+    const file = document.getElementById("picture").value;
+
+    const newMovie = {
+        title: title,
+        director: director,
+        year: year,
+        description: description,
+        country: country,
+        genre: genre,
+        file: file
+    }
+    createMovie(newMovie);
 }
 
 /*async -> requisição ao servidor, ou seja, não bloqueia todo o código 
@@ -58,13 +74,11 @@ async function printMovies() {
         <div class="movie-container">
             <div class="container-left">
                 <h3 class="movie-title">${movie.title}</h3>
-                <button type="submit">${movie.watched}</button>
             </div>
             <div class="container-right">
                 <button type="submit" onclick=deleteMovie('${movie.id}')>Borrar</button>
                 <p class="movie-director">Director: ${movie.director}</p>
                 <p class="movie-description">${movie.description}</p>
-                <p class="movie-duration">${movie.duration}</p>
                 <p class="movie-year">${movie.year}</p>
                 <p class="movie-country">${movie.country}</p>
             </div>
