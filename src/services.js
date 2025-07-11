@@ -1,9 +1,14 @@
 "use strict";
 const URL_API_MOVIES = "http://localhost:3000/movies/";
 
-// modal de adicionar novo filme
+//lógica del modal
 function openModal() {
     document.getElementById("movieModal").style.display = "block";
+    if (movieIdToUpdate) {
+        modalTitle.textContent = 'Editar película';
+    } else {
+        modalTitle.textContent = 'Añadir nueva película';
+    }
 }
 
 function closeModal() {
@@ -11,24 +16,38 @@ function closeModal() {
     document.querySelector("#movieModal form").reset();
     movieIdToUpdate = null;
 }
+const modalTitle = document.querySelector('.modal-title');
 
+//funcion para cada letra sea maiuscula, pero antes tratar para que seja tudo minuscula
+function capitalizeName(str) {
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
+
+//funcion para enviar a bbdd
 function sendMovieInfo(event) {
     event.preventDefault();
 
     const title = document.getElementById("title").value;
+    const capitalizedTitle = capitalizeName(title);
     const director = document.getElementById("director").value;
+    const capitalizedDirector = capitalizeName(director);
     const year = document.getElementById("year").value;
     const description = document.getElementById("description").value;
     const country = document.getElementById("country").value;
+    const capitalizedCountry = capitalizeName(country);
     const genre = document.getElementById("genre").value;
     const picture = document.getElementById("picture").value;
 
     const newMovie = {
-        title: title,
-        director: director,
+        title: capitalizedTitle,
+        director: capitalizedDirector,
         year: year,
         description: description,
-        country: country,
+        country: capitalizedCountry,
         genre: genre,
         picture: picture
     };
@@ -38,7 +57,6 @@ function sendMovieInfo(event) {
     } else {
         createMovie(newMovie);
     }
-
 }
 //Create -> Post
 async function createMovie(newMovie) {
@@ -52,7 +70,12 @@ async function createMovie(newMovie) {
 
     if (response.ok) {
         printMovies();
-        alert(`La película ${newMovie.title} fue añadida.`);
+        const addAnother = confirm(`La película ${newMovie.title} fue añadida. ¿Quieres añadir otra?`);
+        if (addAnother) {
+            document.querySelector("#movieModal form").reset();
+        } else {
+            closeModal();
+        }
     } else {
         alert(`ERROR al intentar añadir la película: ${newMovie.title}.`);
     }
@@ -77,7 +100,7 @@ async function updateMovie(id, editedMovie) {
 }
 
 let movieIdToUpdate = null;
-
+//funcion que guarda informaciones para update
 async function infoMovieUpdate(id) {
     const movie = await getMovieById(id);
 
@@ -140,7 +163,6 @@ async function printMovies() {
                 
             </div>
             <div class="container-right">
-                
                 <p class="movie-director">Director: ${movie.director}</p>
                 <p class="movie-description">${movie.description}</p>
                 <p class="movie-year">${movie.year}</p>
@@ -181,9 +203,25 @@ async function deleteMovie(id) {
 
         if (response.ok) {
             printMovies();
-            alert(`La película >> ${movieComplete.title} << fue eliminada.`);
+            alert(`La película "${movieComplete.title}" fue eliminada.`);
         } else {
             alert(`ERROR: La película >> ${movieComplete.title} << no fue eliminada.`);
         }
     }
 }
+
+//funcion para fixar el titulo despues del parallax
+window.addEventListener('scroll', () => {
+    const title = document.querySelector('.title');
+    const parallaxHeight = document.querySelector('.parallax').offsetHeight;
+
+    if (window.scrollY >= parallaxHeight) {
+        title.style.position = 'fixed';
+        title.style.top = '0';
+        title.style.width = '100%';
+    } else {
+        title.style.position = 'relative';
+        title.style.top = 'auto';
+        title.style.width = 'auto';
+    }
+});

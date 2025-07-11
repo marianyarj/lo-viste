@@ -10,16 +10,20 @@
 </head>
 
 <body>
-    <div class="parallax"></div>
-    <div class="title">
-        <h1>¿LO VISTE?</h1>
-    </div>
-    <div class="parallax"></div>
+    <header>
+        <div class="parallax"></div>
+        <div class="title">
+            <h1>¿LO VISTE?</h1>
+        </div>
+        <div class="parallax"></div>
+    </header>
     <main>
         <div id="movieModal" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h1>Añadir nueva película</h1>
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h1 class="modal-title">Añadir nueva película</h1>
+                </div>
                 <form id="movieForm" onsubmit="sendMovieInfo(event)">
                     <input type="text" id="title" placeholder="Título" required>
                     <br><br>
@@ -35,14 +39,20 @@
                     <br><br>
                     <input type="text" id="picture" placeholder="Informe un la URL de la foto.." required>
                     <br><br>
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Limpiar</button>
+                    <button class="btnModal" type="submit">Enviar</button>
+                    <button class="btnModal" type="reset">Limpiar</button>
                 </form>
             </div>
         </div>
         <br><br>
-        <button type="submit" onclick="printMovies()">Cargar películas</button>
-        <button type="submit" class="newMovie" onclick="openModal()">Añadir</button>
+        <div class="btns">
+            <div class="btnMoviePrintContainer" onclick="printMovies()">
+                <a class="btnPrint">Cargar películas</a>
+            </div>
+            <div class="btnMovieNewContainer" onclick="openModal()">
+                <a class="btnNewMovie2">Añadir Película</a>
+            </div>
+        </div>
         <section class="movie-section" id="section-movies"></section>
     </main>
 </body>
