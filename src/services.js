@@ -156,17 +156,22 @@ async function printMovies() {
                     <h3 class="movie-title">${movie.title}</h3>
                     <img class="movie-pic" src="${movie.picture}" alt="foto de la película ${movie.title}">
                 </div>
-                <div>
-                    <button type="submit" onclick=deleteMovie('${movie.id}')>Borrar</button>
-                    <button type="submit" onclick=infoMovieUpdate('${movie.id}')>Actualizar</button>
+                <div class="card-btn-container">
+                    <button class="btn-delete" type="submit" onclick=deleteMovie('${movie.id}')>Borrar</button>
+                    <button class="btn-update" type="submit" onclick=infoMovieUpdate('${movie.id}')>Actualizar</button>
                 </div>
                 
             </div>
             <div class="container-right">
-                <p class="movie-director">Director: ${movie.director}</p>
-                <p class="movie-description">${movie.description}</p>
-                <p class="movie-year">${movie.year}</p>
-                <p class="movie-country">${movie.country}</p>
+                <div>
+                    <p class="movie-director"><strong>Director: </strong> ${movie.director}</p>
+                    <p class="movie-description"><strong>Descripción: </strong> ${movie.description}</p>
+                    <p class="movie-genero"><strong>Género: </strong>${movie.genre}</p>
+                </div>
+                <div class="container-right-partii">
+                    <p class="movie-year">${movie.year}</p>
+                    <p class="movie-country">${movie.country}</p>
+                </div>
             </div>
         </div>
         `
